@@ -9,7 +9,7 @@
     No audit-trail metadata in the rendered chrome (per CoS Section 19).
     This comment is the audit trail. Versioning per CoS Operating Rule #6.
 
-    Version: v1.3.0 (2026-10-01) [forked from the general flyer
+    Version: v1.3.1 (2026-10-01) [forked from the general flyer
     qaizr-sprint-flyer.html v1.2.7; FAQ and intensive-Sprint sections ported
     from the most recent program-specific page, v1.8.0]
     Brand: matches qaizr-brand-guide.html (Space Grotesk + Inter + JetBrains
@@ -19,6 +19,11 @@
     sections, 1600px stretch).
 
     CHANGELOG
+    v1.3.1  2026-10-01  Wired the live Formspree endpoint for the new form
+                        "Sprint Pre-Registration October 2026" (form id
+                        xaenzzgo). The form is out of demo mode. Live
+                        submissions need the page hosted; the first one
+                        confirms the form.
     v1.3.0  2026-10-01  Registration code is now a required answer, per
                         Brian, so nobody skips it by accident: enter a code,
                         or tick "Not applicable, I do not have a code."
@@ -79,12 +84,11 @@
                         pasted. Client and program codes are verified
                         manually by Melissa and never appear on the page.
 
-    FORMSPREE: DEMO MODE
-    FORM_ENDPOINT below is REPLACE_WITH_FORMSPREE_ENDPOINT, so the form shows
-    a preview confirmation and sends nothing. Paste the new endpoint for the
-    "Sprint Pre-Registration October 2026" form (do not reuse a prior
-    cohort's endpoint) and the form goes live automatically. Real submissions require
-    the page to be hosted; the first submission confirms the form.
+    FORMSPREE: WIRED
+    FORM_ENDPOINT below is the "Sprint Pre-Registration October 2026" form
+    (id xaenzzgo), so the form POSTs to Formspree. Notifications go to
+    maudia@qzr.ai and baudia@qzr.ai. Real submissions require the page to be
+    hosted; Formspree blocks local file:// pages.
   -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -678,13 +682,11 @@
 
   <script>
     /* ============================================================
-       FORMSPREE ENDPOINT - DEMO MODE
-       Paste the endpoint for the "Sprint Pre-Registration October
-       2026" form below (keep the quotes). Do not reuse a prior
-       cohort's endpoint. Until then the
-       form shows a preview confirmation and sends nothing.
+       FORMSPREE ENDPOINT - WIRED
+       Form "Sprint Pre-Registration October 2026" (id xaenzzgo).
+       Real submissions require the page to be hosted.
        ============================================================ */
-    var FORM_ENDPOINT = "REPLACE_WITH_FORMSPREE_ENDPOINT";
+    var FORM_ENDPOINT = "https://formspree.io/f/xaenzzgo";
 
     /* orphan control: keep the last three words of every text block
        together, easing to two or none where the column is too narrow */
